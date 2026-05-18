@@ -95,6 +95,36 @@ int main() {
     printf("PIB: %.2f bilhões de reais \n", pib2);
     printf("Número de Pontos Turísticos: %d \n", pontosTuristicos2);
     printf ("\n");
+  
+ //MENU PARA ESCOLHER A COMPARAÇÃO DE DADOS 
+
+printf("+++++Escolha uma opção+++++");
+printf("1. Populacao \n");
+printf("2. Area \n");
+printf("3. Pib \n");
+printf("4. Pontos turísticos\n");
+scanf("%d", &escolha);
+
+    switch (escolha)
+    {
+    case 1:
+      if (populacao > populacao2){
+        printf("Carta 1 venceu!");
+      }else if (populacao < populacao2){
+        printf("Carta 2 venceu!");
+      }else {
+        printf ("Foi um empate");
+        break;
+      }
+      
+     
+
+    default:
+    printf("Opcao invalida");
+      break;
+    }
+
+  
 
 return 0;
 } 
