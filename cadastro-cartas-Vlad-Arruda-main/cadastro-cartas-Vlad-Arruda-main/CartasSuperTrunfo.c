@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <locale.h>
 
 // Desafio Super Trunfo - Países
 // Tema 1 - Cadastro das cartas
@@ -6,13 +7,15 @@
 
 int main() {
   // Área para definição das variáveis para armazenar as propriedades das cidades
+    setlocale(LC_ALL, "PORTUGUESE");
     char estado, estado2;
     char codigoCarta [4],codigoCarta2 [4] ;
     char nomeCidade [50], nomeCidade2 [50];
     int populacao, pontosTuristicos, populacao2, pontosTuristicos2;
     float area, area2;
     float pib, pib2;
-    int escolha, resultado1, resultado2;
+    int escolha, resultado1;
+    int resultado2;
   
            
   // Área para entrada de dados 
@@ -90,32 +93,22 @@ int main() {
     printf("Área: %.2f km2\n", area2);
     printf("PIB: %.2f bilhões de reais \n", pib2);
     printf("Número de Pontos Turísticos: %d \n", pontosTuristicos2);
-<<<<<<< HEAD:cadastro-cartas-Vlad-Arruda-main/cadastro-cartas-Vlad-Arruda-main/CartasSuperTrunfo.c
+
   
+
  //MENU PARA ESCOLHER A COMPARAÇÃO DE DADOS 
 
-printf("--- ESCOLHA O PRIMEIRO ATRIBUTO PARA COMPARAÇÃO ---\n");
-printf("1. Densidade Populacional \n");
+printf("--- ESCOLHA O PRIMEIRO ATRIBUTO PARA PRIMEIRA COMPARAÇÃO ---\n");
+printf("1. Populacao \n");
 printf("2. Área \n");
 printf("3. Pib \n");
-printf("4. Pontos Turísticos\n");
-=======
-    printf ("\n");
-  
- //MENU PARA ESCOLHER A COMPARAÇÃO DE DADOS 
-
-printf("+++++Escolha uma opção+++++");
-printf("1. Populacao \n");
-printf("2. Area \n");
-printf("3. Pib \n");
 printf("4. Pontos turísticos\n");
->>>>>>> f19b2ab78327a7705a34dc9617c229dec311c9c6:CartasSuperTrunfo.c
+printf("Digite a sua escolha: ");
 scanf("%d", &escolha);
 
     switch (escolha)
     {
     case 1:
-<<<<<<< HEAD:cadastro-cartas-Vlad-Arruda-main/cadastro-cartas-Vlad-Arruda-main/CartasSuperTrunfo.c
     resultado1 = populacao < populacao2 ? 1:0;  //Ganha quem tiver a menor densidade populacional.
     break;
 
@@ -136,22 +129,15 @@ scanf("%d", &escolha);
     break;
     }
 
-printf("--- ESCOLHA O SEGUNDO ATRIBUTO PARA COMPARAÇÃO ---\n");
+printf("--- ESCOLHA O PRIMEIRO ATRIBUTO PARA SEGUNDA COMPARAÇÃO ---\n");
 printf("1. Densidade Populacional \n");
 printf("2. Área \n");
 printf("3. Pib \n");
 printf("4. Pontos Turísticos\n");
+printf("Digite a sua escolha: ");
 scanf("%d", &escolha);
 
-if (resultado1 == resultado2){
-printf("Escolha de atributo inválida, escolha um atri8buto diferente do anterior\n\n");
-printf("--- ESCOLHA O SEGUNDO ATRIBUTO PARA COMPARAÇÃO ---\n");
-printf("1. Densidade Populacional \n");
-printf("2. Área \n");
-printf("3. Pib \n");
-printf("4. Pontos Turísticos\n");
-scanf("%d", &escolha);
-
+}
 
 switch (escolha)
     {
@@ -175,28 +161,31 @@ switch (escolha)
     printf("Opcao invalida");
     break;
     }
+    if (resultado1 == resultado2){
+    printf("Escolha de atributo inválida, escolha um atributo diferente do anterior\n\n");
+    printf("--- ESCOLHA O SEGUNDO ATRIBUTO PARA COMPARAÇÃO ---\n");
+    printf("1. Densidade Populacional \n");
+    printf("2. Área \n");
+    printf("3. Pib \n");
+    printf("4. Pontos Turísticos\n");
+    printf("Digite a sua escolha: ");
+    scanf("%d", &escolha);
 
     
-
-=======
-      if (populacao > populacao2){
+       if (populacao > populacao2){
         printf("Carta 1 venceu!");
       }else if (populacao < populacao2){
         printf("Carta 2 venceu!");
       }else {
         printf ("Foi um empate");
-        break;
+        
       }
       
-     
+     return 0;
 
-    default:
-    printf("Opcao invalida");
-      break;
->>>>>>> f19b2ab78327a7705a34dc9617c229dec311c9c6:CartasSuperTrunfo.c
     }
 
   
 
-return 0;
-} 
+
+ 
