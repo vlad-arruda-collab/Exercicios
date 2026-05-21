@@ -14,7 +14,7 @@ int main() {
     int populacao, pontosTuristicos, populacao2, pontosTuristicos2;
     float area, area2;
     float pib, pib2;
-    int escolha, resultado1;
+    int escolha, escolha2, resultado1;
     int resultado2;
   
            
@@ -129,17 +129,17 @@ scanf("%d", &escolha);
     break;
     }
 
-printf("--- ESCOLHA O PRIMEIRO ATRIBUTO PARA SEGUNDA COMPARAÇÃO ---\n");
+printf("--- ESCOLHA O SEGUNDO ATRIBUTO PARA SEGUNDA COMPARAÇÃO ---\n");
 printf("1. Densidade Populacional \n");
 printf("2. Área \n");
 printf("3. Pib \n");
 printf("4. Pontos Turísticos\n");
 printf("Digite a sua escolha: ");
-scanf("%d", &escolha);
+scanf("%d", &escolha2);
 
 }
 
-switch (escolha)
+switch (escolha2)
     {
     case 1:
     resultado2 = populacao < populacao2 ? 1:0;  //Ganha quem tiver a menor densidade populacional.
@@ -161,7 +161,7 @@ switch (escolha)
     printf("Opcao invalida");
     break;
     }
-    if (resultado1 == resultado2){
+    if (escolha == escolha2){
     printf("Escolha de atributo inválida, escolha um atributo diferente do anterior\n\n");
     printf("--- ESCOLHA O SEGUNDO ATRIBUTO PARA COMPARAÇÃO ---\n");
     printf("1. Densidade Populacional \n");
@@ -169,7 +169,7 @@ switch (escolha)
     printf("3. Pib \n");
     printf("4. Pontos Turísticos\n");
     printf("Digite a sua escolha: ");
-    scanf("%d", &escolha);
+    scanf("%d", &escolha2);
 
     
        if (populacao > populacao2){
