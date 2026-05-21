@@ -7,7 +7,6 @@
 
 int main() {
   // Área para definição das variáveis para armazenar as propriedades das cidades
-    setlocale(LC_ALL, "PORTUGUESE");
     char estado, estado2;
     char codigoCarta [4],codigoCarta2 [4] ;
     char nomeCidade [50], nomeCidade2 [50];
@@ -98,13 +97,13 @@ int main() {
 
  //MENU PARA ESCOLHER A COMPARAÇÃO DE DADOS 
 
-printf("--- ESCOLHA O PRIMEIRO ATRIBUTO PARA PRIMEIRA COMPARAÇÃO ---\n");
-printf("1. Populacao \n");
-printf("2. Área \n");
-printf("3. Pib \n");
-printf("4. Pontos turísticos\n");
-printf("Digite a sua escolha: ");
-scanf("%d", &escolha);
+    printf("--- ESCOLHA O PRIMEIRO ATRIBUTO PARA PRIMEIRA COMPARAÇÃO ---\n");
+    printf("1. Populacao \n");
+    printf("2. Área \n");
+    printf("3. Pib \n");
+    printf("4. Pontos turísticos\n");
+    printf("Digite a sua escolha: ");
+    scanf("%d", &escolha);
 
     switch (escolha)
     {
@@ -129,13 +128,13 @@ scanf("%d", &escolha);
     break;
     }
 
-printf("--- ESCOLHA O SEGUNDO ATRIBUTO PARA SEGUNDA COMPARAÇÃO ---\n");
-printf("1. Densidade Populacional \n");
-printf("2. Área \n");
-printf("3. Pib \n");
-printf("4. Pontos Turísticos\n");
-printf("Digite a sua escolha: ");
-scanf("%d", &escolha2);
+    printf("--- ESCOLHA O SEGUNDO ATRIBUTO PARA SEGUNDA COMPARAÇÃO ---\n");
+    printf("1. Densidade Populacional \n");
+    printf("2. Área \n");
+    printf("3. Pib \n");
+    printf("4. Pontos Turísticos\n");
+    printf("Digite a sua escolha: ");
+    scanf("%d", &escolha2);
 
 }
 
@@ -172,12 +171,12 @@ switch (escolha2)
     scanf("%d", &escolha2);
 
     
-       if (populacao > populacao2){
+      /* if (populacao > populacao2){
         printf("Carta 1 venceu!");
       }else if (populacao < populacao2){
         printf("Carta 2 venceu!");
       }else {
-        printf ("Foi um empate");
+        printf ("Foi um empate");*/
         
       }
       
