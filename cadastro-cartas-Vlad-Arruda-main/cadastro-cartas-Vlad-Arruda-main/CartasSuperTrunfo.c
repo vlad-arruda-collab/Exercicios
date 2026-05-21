@@ -4,12 +4,6 @@
 // Tema 1 - Cadastro das cartas
 // Objetivo: No nível novato você deve criar as cartas representando as cidades utilizando scanf para entrada de dados e printf para exibir as informações.
 
-#include <stdio.h>
-
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das cartas
-// Objetivo: No nível novato você deve criar as cartas representando as cidades utilizando scanf para entrada de dados e printf para exibir as informações.
-
 int main() {
   // Área para definição das variáveis para armazenar as propriedades das cidades
     char estado, estado2;
@@ -18,6 +12,8 @@ int main() {
     int populacao, pontosTuristicos, populacao2, pontosTuristicos2;
     float area, area2;
     float pib, pib2;
+    int escolha, resultado1, resultado2;
+  
            
   // Área para entrada de dados 
   //Carta 1
@@ -82,9 +78,8 @@ int main() {
     printf("Área: %.2f km2\n", area);
     printf("PIB: %.2f bilhões de reais \n", pib);
     printf("Número de Pontos Turísticos: %d \n", pontosTuristicos);
-    printf ("\n");
-    printf ("\n");
-
+  
+  
     printf("------Carta 2------");
     printf ("\n");
     printf( "Estado:  %c \n", estado2);
@@ -94,7 +89,84 @@ int main() {
     printf("Área: %.2f km2\n", area2);
     printf("PIB: %.2f bilhões de reais \n", pib2);
     printf("Número de Pontos Turísticos: %d \n", pontosTuristicos2);
-    printf ("\n");
+  
+ //MENU PARA ESCOLHER A COMPARAÇÃO DE DADOS 
+
+printf("--- ESCOLHA O PRIMEIRO ATRIBUTO PARA COMPARAÇÃO ---\n");
+printf("1. Densidade Populacional \n");
+printf("2. Área \n");
+printf("3. Pib \n");
+printf("4. Pontos Turísticos\n");
+scanf("%d", &escolha);
+
+    switch (escolha)
+    {
+    case 1:
+    resultado1 = populacao < populacao2 ? 1:0;  //Ganha quem tiver a menor densidade populacional.
+    break;
+
+    case 2:
+    resultado1 = area > area2 ?  1: 0; 
+    break;
+
+    case 3:
+    resultado1 = pib > pib2 ? 1: 0;
+    break;
+
+    case 4:
+    resultado1 = pontosTuristicos > pontosTuristicos2 ? 1 : 0;
+    break;
+
+    default:
+    printf("Opcao invalida");
+    break;
+    }
+
+printf("--- ESCOLHA O SEGUNDO ATRIBUTO PARA COMPARAÇÃO ---\n");
+printf("1. Densidade Populacional \n");
+printf("2. Área \n");
+printf("3. Pib \n");
+printf("4. Pontos Turísticos\n");
+scanf("%d", &escolha);
+
+if (resultado1 == resultado2){
+printf("Escolha de atributo inválida, escolha um atri8buto diferente do anterior\n\n");
+printf("--- ESCOLHA O SEGUNDO ATRIBUTO PARA COMPARAÇÃO ---\n");
+printf("1. Densidade Populacional \n");
+printf("2. Área \n");
+printf("3. Pib \n");
+printf("4. Pontos Turísticos\n");
+scanf("%d", &escolha);
+
+
+switch (escolha)
+    {
+    case 1:
+    resultado2 = populacao < populacao2 ? 1:0;  //Ganha quem tiver a menor densidade populacional.
+    break;
+
+    case 2:
+    resultado2 = area > area2 ?  1: 0; 
+    break;
+
+    case 3:
+    resultado2 = pib > pib2 ? 1: 0;
+    break;
+
+    case 4:
+    resultado2 = pontosTuristicos > pontosTuristicos2 ? 1 : 0;
+    break;
+
+    default:
+    printf("Opcao invalida");
+    break;
+    }
+
+    
+
+    }
+
+  
 
 return 0;
 } 
