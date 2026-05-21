@@ -17,6 +17,7 @@ int main() {
            
   // Área para entrada de dados 
   //Carta 1
+  
     printf("------Entre com os dados da carta 1------");
     printf("\n");
     printf("Escolha uma letra entre A e H para o Estado: ");
@@ -29,7 +30,7 @@ int main() {
   
     scanf(" %49[^\n]", nomeCidade); // Elimina a erro de pular linha , limita a leitura a 49 caracteres,  lê tudo que não seja \n
     
-    printf("Entre com a população da cidade: ");
+    printf("Entre com a densidade populacional: ");
     scanf( "%d", &populacao);
 
     printf("Entre com a área: ");
@@ -53,7 +54,7 @@ int main() {
   
     scanf(" %49[^\n]", nomeCidade2); // Elimina a erro de pular linha , limita a leitura a 49 caracteres,  lê tudo que não seja \n
     
-    printf("Entre com a população da cidade: ");
+    printf("Entre densidade populacional: ");
     scanf( "%d", &populacao2);
 
     printf("Entre com a área: ");
@@ -89,6 +90,7 @@ int main() {
     printf("Área: %.2f km2\n", area2);
     printf("PIB: %.2f bilhões de reais \n", pib2);
     printf("Número de Pontos Turísticos: %d \n", pontosTuristicos2);
+<<<<<<< HEAD:cadastro-cartas-Vlad-Arruda-main/cadastro-cartas-Vlad-Arruda-main/CartasSuperTrunfo.c
   
  //MENU PARA ESCOLHER A COMPARAÇÃO DE DADOS 
 
@@ -97,11 +99,23 @@ printf("1. Densidade Populacional \n");
 printf("2. Área \n");
 printf("3. Pib \n");
 printf("4. Pontos Turísticos\n");
+=======
+    printf ("\n");
+  
+ //MENU PARA ESCOLHER A COMPARAÇÃO DE DADOS 
+
+printf("+++++Escolha uma opção+++++");
+printf("1. Populacao \n");
+printf("2. Area \n");
+printf("3. Pib \n");
+printf("4. Pontos turísticos\n");
+>>>>>>> f19b2ab78327a7705a34dc9617c229dec311c9c6:CartasSuperTrunfo.c
 scanf("%d", &escolha);
 
     switch (escolha)
     {
     case 1:
+<<<<<<< HEAD:cadastro-cartas-Vlad-Arruda-main/cadastro-cartas-Vlad-Arruda-main/CartasSuperTrunfo.c
     resultado1 = populacao < populacao2 ? 1:0;  //Ganha quem tiver a menor densidade populacional.
     break;
 
@@ -164,6 +178,22 @@ switch (escolha)
 
     
 
+=======
+      if (populacao > populacao2){
+        printf("Carta 1 venceu!");
+      }else if (populacao < populacao2){
+        printf("Carta 2 venceu!");
+      }else {
+        printf ("Foi um empate");
+        break;
+      }
+      
+     
+
+    default:
+    printf("Opcao invalida");
+      break;
+>>>>>>> f19b2ab78327a7705a34dc9617c229dec311c9c6:CartasSuperTrunfo.c
     }
 
   
